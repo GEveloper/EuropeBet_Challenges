@@ -79,7 +79,8 @@ namespace Challenge_2
 
         public void go_sleep()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("ZzZzzz...");
+            System.Threading.Thread.Sleep(3000);
         }
 
         public void go_alive()
