@@ -27,7 +27,7 @@ namespace Challenge_0
 
         private static void sleep()
         {
-            throw new NotImplementedException();
+            System.Threading.Thread.Sleep(8 * 60 * 60 * 1000);
         }
 
         private static void eat()
