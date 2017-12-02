@@ -9,7 +9,9 @@ namespace Challenge_0
     {
         static void Main(string[] args)
         {
-            while(!wokrs_in_europebet)
+            bool works_in_europebet = true;
+
+            while (works_in_europebet)
             {
                 code();
                 //sleep();
