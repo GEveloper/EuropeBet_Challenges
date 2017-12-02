@@ -13,30 +13,63 @@ namespace Challenge_2
 
         public bool alive { get; private set; }
 
-        public bool are_stressed { get; set; }
+        public bool are_stressed { get; private set; }
         
         public bool are_saint { get; private set; }
 
         public readonly bool are_alone = true;
 
         protected Random random = new Random();
-        
+
+        private double coding_power = 0;
+
+        private List<string> code_snippets = new List<string>();
+
+        private int total_lines_coded = 0;
+
         public Coder(string Name, int ExperienceYears)
         {
             this.Name = Name;
             this.ExperienceYears = ExperienceYears;
             this.alive = true;
             this.are_saint = random.NextDouble() > 0.5;
+
+            // Fill code snippets list
+            this.code_snippets.AddRange(new List<string>
+            {
+                "Console.WriteLine(\"Hello\");",
+                "Console.WriteLine(\"World\");",
+                "Console.ReadKey();",
+                "Console.Beep();",
+                "if (2 * 2 == 5) return true;",
+                "return new Matrix(rabbit_width, rabbit_height);",
+                "using Brain;",
+                "this.is = (bool)shit;",
+                "{",
+                "}"
+            });
         }
 
         public void drink_coffee()
         {
-            throw new NotImplementedException();
+            int cups = random.Next(1, 3);
+            double power = cups * 1.5;
+            this.coding_power += cups;
         }
 
         public void code()
         {
-            throw new NotImplementedException();
+            while (this.coding_power > 1.0)
+            {
+                Console.WriteLine(this.code_snippets[random.Next(0, this.code_snippets.Count - 1)]);
+                this.total_lines_coded++;
+                this.coding_power -= 1.0;
+
+                if (this.total_lines_coded > 1000)
+                {
+                    this.are_stressed = true;
+                }
+            }
         }
 
         public void go_rest()
