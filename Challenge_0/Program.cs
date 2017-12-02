@@ -32,7 +32,14 @@ namespace Challenge_0
 
         private static void eat()
         {
-            throw new NotImplementedException();
+            string[] foods = new string[3] { "apple", "banana", "lobio" };
+            Random rnd = new Random();
+
+            foreach (string food in foods)
+            {
+                int ration = rnd.Next(0, foods.Length);
+                food.Take(ration);
+            }
         }
 
         private static void have_fun()
