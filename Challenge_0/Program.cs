@@ -22,7 +22,7 @@ namespace Challenge_0
 
         private static void code()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Console.WriteLine(\"Hello World\");");
         }
 
         private static void sleep()
