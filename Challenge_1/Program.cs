@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace Challenge_1
 {
@@ -14,17 +11,17 @@ namespace Challenge_1
         {
             while (alive) 
             {
-                drink_coffee();
-                code();
+                DrinkCoffee();
+                Code();
             }
 
             Console.WriteLine("Ohh, It's zombie! :O");
             Console.ReadKey();
         }
 
-        private static void drink_coffee()
+        private static void DrinkCoffee()
         {
-            int daily_limit = 5 * create_coffee();
+            int daily_limit = 5 * CreateCoffee();
 
             if (drank_coffee >= daily_limit)
             {
@@ -33,12 +30,12 @@ namespace Challenge_1
                 return;
             }
 
-            drank_coffee += create_coffee();
+            drank_coffee += CreateCoffee();
             Console.WriteLine("// Nice coffee! A programmer is just a tool " +
-                "that converts caffeine into code!");
+                "that converts caffeine into Code!");
         }
 
-        private static int create_coffee()
+        private static int CreateCoffee()
         {
             int coffee = 1;
             int suggar = 2;
@@ -47,7 +44,7 @@ namespace Challenge_1
             return coffee + suggar + water;
         }
 
-        private static void code()
+        private static void Code()
         {
             Console.WriteLine(
                 "static void Main(string[] args)" + Environment.NewLine +
