@@ -76,11 +76,22 @@ namespace Challenge_2
             }
         }
 
-        public void go_rest()
+        public bool go_rest()
         {
+            bool rest_in_peace = random.NextDouble() <= 0.1;
+
+            if (rest_in_peace)
+            {
+                this.alive = false;
+                Console.WriteLine("RIP ;(");
+                return false;
+            }
+
             this.total_lines_coded = 0;
+            this.are_stressed = false;
             Console.WriteLine("huhhh...");
             Thread.Sleep(1000);
+            return true;
         }
 
         public void go_have_fun()
