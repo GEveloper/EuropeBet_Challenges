@@ -28,12 +28,15 @@ namespace Challenge_2
 
         private int total_lines_coded = 0;
 
+        private int y_axis { get; set; }
+
         public Coder(string Name, int ExperienceYears)
         {
             this.Name = Name;
             this.ExperienceYears = ExperienceYears;
             this.alive = true;
             this.are_saint = random.NextDouble() > 0.5;
+            this.y_axis = this.are_saint ? 100 : 0;
 
             // Fill code snippets list
             this.code_snippets.AddRange(new List<string>
@@ -80,6 +83,11 @@ namespace Challenge_2
             Thread.Sleep(1000);
         }
 
+        public void go_have_fun()
+        {
+            Console.WriteLine("Beer = Brew, Enjoy, Empty, Repeat.");
+        }
+
         public void go_sleep()
         {
             Console.WriteLine("ZzZzzz...");
@@ -88,32 +96,36 @@ namespace Challenge_2
 
         public void go_alive()
         {
-            throw new NotImplementedException();
-        }
-
-        public void cheer_up()
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool go_to_hell()
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool go_to_heaven()
-        {
-            throw new NotImplementedException();
+            Console.WriteLine("Life sucks.");
         }
 
         public void go_find_soulmate()
         {
-            throw new NotImplementedException();
+            if ((1 + 1) * (1 + 1) == 5)
+            {
+                Console.WriteLine("Congrats, you found your soulmate!"); // btw we ignore warnings
+            }
+            else
+            {
+                Console.WriteLine("Error 404: soulmate not found.");
+            }
         }
 
-        public void go_have_fun()
+        public void cheer_up()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("whatever :-)");
+        }
+
+        public bool go_to_heaven()
+        {
+            this.y_axis += 1000000000;
+            return true;
+        }
+
+        public bool go_to_hell()
+        {
+            this.y_axis -= 1000000000;
+            return false;
         }
     }
 }
