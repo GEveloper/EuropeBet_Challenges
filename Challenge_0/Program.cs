@@ -7,10 +7,12 @@ namespace Challenge_0
 {
     class Program
     {
+        static bool works_in_europebet = true;
+        static int fun = 0;
+        static int fun_limit = 2017;
+
         static void Main(string[] args)
         {
-            bool works_in_europebet = true;
-
             while (works_in_europebet)
             {
                 code();
@@ -18,6 +20,9 @@ namespace Challenge_0
                 eat();
                 have_fun();
             }
+
+            Console.WriteLine("You are not working in EuropeBet, no more.");
+            Console.ReadKey();
         }
 
         private static void code()
@@ -44,7 +49,12 @@ namespace Challenge_0
 
         private static void have_fun()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("life is awesome!");
+
+            if (++fun > fun_limit) // too much fun!
+            {
+                works_in_europebet = false;
+            }
         }
     }
 }
