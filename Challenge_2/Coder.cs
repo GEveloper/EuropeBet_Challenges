@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 
 namespace Challenge_2
 {
@@ -74,13 +75,15 @@ namespace Challenge_2
 
         public void go_rest()
         {
-            throw new NotImplementedException();
+            this.total_lines_coded = 0;
+            Console.WriteLine("huhhh...");
+            Thread.Sleep(1000);
         }
 
         public void go_sleep()
         {
             Console.WriteLine("ZzZzzz...");
-            System.Threading.Thread.Sleep(3000);
+            Thread.Sleep(3000);
         }
 
         public void go_alive()
