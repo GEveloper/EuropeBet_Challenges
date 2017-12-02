@@ -15,27 +15,27 @@ namespace Challenge_0
         {
             while (works_in_europebet)
             {
-                code();
-                //sleep();
-                eat();
-                have_fun();
+                Code();
+                //Sleep();
+                Eat();
+                HaveFun();
             }
 
-            Console.WriteLine("You are not working in EuropeBet, no more.");
+            Console.WriteLine("You are not working in EuropeBet, anymore.");
             Console.ReadKey();
         }
 
-        private static void code()
+        private static void Code()
         {
             Console.WriteLine("Console.WriteLine(\"Hello World\");");
         }
 
-        private static void sleep()
+        private static void Sleep()
         {
             System.Threading.Thread.Sleep(8 * 60 * 60 * 1000);
         }
 
-        private static void eat()
+        private static void Eat()
         {
             string[] foods = new string[3] { "apple", "banana", "lobio" };
             Random rnd = new Random();
@@ -47,7 +47,7 @@ namespace Challenge_0
             }
         }
 
-        private static void have_fun()
+        private static void HaveFun()
         {
             Console.WriteLine("life is awesome!");
 
