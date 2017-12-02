@@ -7,6 +7,10 @@ namespace Challenge_2
 {
     class Coder
     {
+        public string Name { get; private set; }
+
+        public int ExperienceYears { get; private set; }
+
         public bool alive { get; private set; }
 
         public bool are_stressed { get; set; }
@@ -17,8 +21,10 @@ namespace Challenge_2
 
         protected Random random = new Random();
         
-        public Coder()
+        public Coder(string Name, int ExperienceYears)
         {
+            this.Name = Name;
+            this.ExperienceYears = ExperienceYears;
             this.alive = true;
             this.are_saint = random.NextDouble() > 0.5;
         }

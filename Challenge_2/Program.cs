@@ -9,7 +9,7 @@ namespace Challenge_2
     {
         static void Main(string[] args)
         {
-            Coder you = new Coder();
+            Coder you = new Coder(Name: "GEveloper", ExperienceYears: 4);
 
             while (you.alive)
             {
