@@ -34,7 +34,7 @@ namespace Challenge_2
             bool result = you.are_saint ? you.go_to_heaven() : you.go_to_hell();
 
             /* exception is thrown here,
-             * you are coder you now everything is lie, matrix doesn't work that way)) */
+             * you are coder, you know everything is lie, matrix doesn't work that way)) */
 
         }
     }
