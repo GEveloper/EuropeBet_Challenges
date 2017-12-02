@@ -9,6 +9,17 @@ namespace Challenge_0
     {
         static void Main(string[] args)
         {
+            while(!wokrs_in_europebet)
+            {
+                code();
+                //sleep();
+                eat();
+                have_fun();
+            }
+        }
+
+        have_fun(){
+            throw new NotImplementedException();
         }
     }
 }
