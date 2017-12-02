@@ -20,7 +20,23 @@ namespace Challenge_0
             }
         }
 
-        have_fun(){
+        private static void code()
+        {
+            throw new NotImplementedException();
+        }
+
+        private static void sleep()
+        {
+            throw new NotImplementedException();
+        }
+
+        private static void eat()
+        {
+            throw new NotImplementedException();
+        }
+
+        private static void have_fun()
+        {
             throw new NotImplementedException();
         }
     }
